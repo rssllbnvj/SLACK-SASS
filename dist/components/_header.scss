@@ -48,7 +48,7 @@
             padding: 2rem;
         }
 
-        ul {
+        ul.nav {
             display: flex;
             flex-direction: column;
             margin-top: 3rem;
@@ -60,10 +60,30 @@
                     color: $clr-dark;
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
                     i {
                         color: $clr-dark;
+                        transition: 0.2s ease;
+                        &.open {
+                            transform: rotate(90deg);
+                            transition: 0.2s ease;
+                        }
                     }
+                }
+            }
+            ul.drop {
+                background: $clr-light;
+                margin: 0 3rem;
+                max-height: 0rem;
+                overflow: hidden;
+                transition: 0.5s ease;
+                li {
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+                &.open {
+                    max-height: 50rem;
+                    transition: 0.5s ease;
                 }
             }
         }
@@ -72,7 +92,7 @@
             position: absolute;
             bottom: 3rem;
             width: 100%;
-            // background: $clr-light;
+            background: $clr-light;
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -147,6 +167,11 @@
 
         &__btn {
             display: none;
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__nav{
+            display:none;
         }
     }
 }
