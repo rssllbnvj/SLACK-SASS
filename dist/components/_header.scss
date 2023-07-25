@@ -4,16 +4,17 @@
     position: fixed;
     width: 100%;
     .container{
-        transition: 1s ease;
+        transition: .5s ease;
     }
 
     &.white {
         background: transparent;
         .container {
             background: blue;
-            border-radius: 3rem;
+            border-radius: 50px;
             margin-top:5rem;
-            transition:2s ease;
+            transition:.5s ease;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
     }
 
