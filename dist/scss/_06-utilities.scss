@@ -1,0 +1,24 @@
+.button {
+    display: inline-block;
+    background: $clr-primary;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 1px solid transparent;
+
+    &-primary {
+        background:$clr-primary;
+        color:#ffffff;
+        border: 1px solid $clr-primary;
+        padding: 2rem 3rem;
+    }
+    &-light {
+        background: #ffffff;
+        border: 1px solid $clr-primary;
+        color:$clr-primary;
+        padding: 2rem 3rem;
+    }
+}
+
+
+
+
