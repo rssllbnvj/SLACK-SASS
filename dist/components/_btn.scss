@@ -1,0 +1,21 @@
+.btn {
+    display: inline-block;
+    background: $clr-dark;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+
+    &.bg {
+        &--primary {
+            background: $clr-primary;
+            color: $clr-light;
+            border: 1px solid $clr-light;
+        }
+        &--light {
+            background: #ffffff;
+            border: 1px solid $clr-primary;
+            color: $clr-primary;
+        }
+    }
+}
