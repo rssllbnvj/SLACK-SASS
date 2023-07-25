@@ -32,6 +32,8 @@ body {
 .header {
   background: hsl(294, 54%, 27%);
   position: relative;
+  position: fixed;
+  width: 100%;
 }
 .header__wrapper {
   display: flex;
@@ -116,7 +118,7 @@ body {
   z-index: 999;
 }
 .header__actions .toggle__menu span {
-  width: 3rem;
+  width: 1.5rem;
   height: 0.2rem;
   background-color: hsl(0, 0%, 100%);
   display: block;
@@ -126,8 +128,8 @@ body {
   margin: 0.3rem 0;
 }
 .header__actions .toggle__menu.open span:first-child {
-  background-color: hsl(300, 62.16%, 14.51%);
-  width: 3rem;
+  background-color: hsl(0, 0%, 0%);
+  width: 1.5rem;
   height: 0.2rem;
   display: block;
   border-radius: 5rem;
@@ -139,8 +141,9 @@ body {
   background-color: hsl(300, 62.16%, 14.51%);
 }
 .header__actions .toggle__menu.open span:last-child {
+  width: 1.5rem;
   background-color: hsl(300, 62.16%, 14.51%);
-  transform: translateY(-5.5px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
   transition: 0.5s ease;
 }
 .header__actions .toggle__menu.open::after {
