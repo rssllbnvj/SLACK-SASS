@@ -363,6 +363,7 @@ body {
 .banner {
   background: hsl(294, 54%, 27%);
   position: relative;
+  height: 100vh;
 }
 .banner__wrapper {
   padding-top: 10rem;
@@ -411,23 +412,27 @@ body {
 }
 .banner__text p {
   color: hsl(0, 0%, 100%);
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
-.banner video {
+.banner__video video {
   width: 100%;
-  height: 400px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  position: unset;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .banner__slfree {
   display: none;
 }
 @media screen and (min-width: 940px) {
-  .banner .banner__content {
+  .banner .banner__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5rem;
+    grid-gap: 2rem;
+  }
+  .banner .banner__content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -474,12 +479,15 @@ body {
     padding-right: 1rem;
   }
   .banner .banner__video {
+    position: relative;
+  }
+  .banner .banner__video video {
     width: 100%;
     height: 400px;
     -o-object-fit: cover;
        object-fit: cover;
-    position: unset;
-    align-items: center;
+    position: absolute;
+    left: 75rem;
   }
   .banner .banner__slfree {
     display: grid;

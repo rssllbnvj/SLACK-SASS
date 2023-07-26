@@ -1,6 +1,7 @@
 .banner {
     background: $clr-primary;
     position: relative;
+    height: 100vh;
     &__wrapper {
         padding-top: 10rem;
     }
@@ -47,21 +48,26 @@
 
         & p {
             color: $clr-light;
-            padding-bottom: 3rem;
+            padding-bottom: 5rem;
         }
     }
-    video {
-        @include imgFit(100%, 400px);
-        position:unset;
-
+    &__video {
+        video {
+            @include imgFit(100%, 300px);
+            position: absolute;
+            left:0;
+            bottom: 0;
+        }
     }
     &__slfree {
         display: none;
     }
     @include mediaQuery($break-lg) {
         .banner {
+            &__wrapper {
+                @include gridEven(2, 2rem);
+            }
             &__content {
-                @include gridEven(2, 5rem);
                 padding-top: 5rem;
                 padding-bottom: 5rem;
             }
@@ -107,9 +113,12 @@
                 }
             }
             &__video {
-                @include imgFit(100%, 400px);
-                position: unset;
-                align-items: center;
+                position: relative;
+                video {
+                    @include imgFit(100%, 400px);
+                    position: absolute;
+                    left: 75rem;
+                }
             }
             &__slfree {
                 display: grid;
@@ -196,4 +205,3 @@
         }
     }
 }
-
