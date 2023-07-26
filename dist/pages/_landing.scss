@@ -3,6 +3,7 @@
     position: relative;
     &__wrapper {
         padding-top: 10rem;
+        height:100vh;
     }
 
     &__btn {
@@ -16,7 +17,7 @@
             background: #4285f4;
             border: 0px;
             text-align: center;
-            position:relative;
+            position: relative;
 
             img {
                 @include imgFit(4rem, 4rem);
@@ -24,12 +25,12 @@
                 align-items: center;
                 padding: 1rem;
                 background: $clr-light;
-                left:0.5rem;
-                top:0.6rem;
+                left: 0.5rem;
+                top: 0.6rem;
                 border-radius: 3px;
             }
             span {
-                margin-left:2rem;
+                margin-left: 2rem;
             }
         }
     }
@@ -52,18 +53,18 @@
     }
     video {
         @include imgFit(100%, 400px);
-        position: unset;
-        bottom: 0;
+        position:unset;
+        bottom:0;
+        left:0;
+
     }
     &__slfree {
         display: none;
     }
     @include mediaQuery($break-lg) {
         .banner {
-            &__wrapper {
-            }
             &__content {
-                @include gridEven(2,5rem);
+                @include gridEven(2, 5rem);
                 padding-top: 5rem;
                 padding-bottom: 5rem;
             }
@@ -85,31 +86,27 @@
                 flex-direction: row;
                 padding-top: 2rem;
                 padding-bottom: 2rem;
-                a {
-                }
+
                 a:last-child {
                     background: #4285f4;
                     border: 0px;
                     text-align: center;
-                    position:relative;
-        
+                    position: relative;
+
                     img {
                         @include imgFit(4rem, 4rem);
                         position: absolute;
                         align-items: center;
                         padding: 1rem;
                         background: $clr-light;
-                        left:0.8rem;
-                        top:0.6rem;
+                        left: 0.8rem;
+                        top: 0.6rem;
                         border-radius: 3px;
                     }
                     span {
-                        margin-left:5rem;
+                        margin-left: 5rem;
                         padding-right: 1rem;
                     }
-                }
-                img {
-
                 }
             }
             &__video {
@@ -130,14 +127,13 @@
 
 .ltrust {
     background: $clr-fwhite;
-    
-    &__wrapper{
-        padding-top:5rem;
-        padding-bottom:5rem;
+
+    &__wrapper {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     &__icons {
-        
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -157,28 +153,28 @@
             &#target {
                 width: 5rem;
             }
-            &#etsy{
+            &#etsy {
                 width: 5rem;
             }
         }
     }
 
     &__text {
-        display:none;
+        display: none;
         font-size: 1.5rem;
         padding-top: 2rem;
         text-align: center;
         font-weight: 600;
     }
     @include mediaQuery($break-lg) {
-        &__wrapper{
-            padding-top:2rem;
-            padding-bottom:5rem;
+        &__wrapper {
+            padding-top: 2rem;
+            padding-bottom: 5rem;
         }
         &__icons {
             display: flex;
             align-items: center;
-            gap:5rem;
+            gap: 5rem;
             img {
                 &#airbnb {
                     width: 12rem;
@@ -192,13 +188,13 @@
                 &#target {
                     width: 7rem;
                 }
-                &#etsy{
+                &#etsy {
                     width: 7rem;
                 }
             }
         }
-        &__text{
-            display:block;
+        &__text {
+            display: block;
             padding-bottom: 2rem;
         }
     }
