@@ -44,9 +44,9 @@ body {
   background: transparent;
 }
 .header.white .container {
-  background: blue;
+  background: hsl(300, 62.16%, 14.51%);
   border-radius: 50px;
-  margin-top: 5rem;
+  margin-top: 1rem;
   transition: 0.5s ease;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -379,19 +379,23 @@ body {
   background: #4285f4;
   border: 0px;
   text-align: center;
+  position: relative;
 }
 .banner__btn a:last-child img {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
-  align-content: center;
+  align-items: center;
   padding: 1rem;
   background: hsl(0, 0%, 100%);
-  left: 0;
-  top: 0;
-  bottom: 0;
+  left: 0.5rem;
+  top: 0.6rem;
+  border-radius: 3px;
+}
+.banner__btn a:last-child span {
+  margin-left: 2rem;
 }
 .banner__text {
   text-align: center;
@@ -423,9 +427,8 @@ body {
 @media screen and (min-width: 940px) {
   .banner .banner__content {
     display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -448,11 +451,28 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  .banner .banner__btn a {
-    padding-top: 19px;
-    padding-right: 40px;
-    padding-bottom: 20px;
-    padding-left: 40px;
+  .banner .banner__btn a:last-child {
+    background: #4285f4;
+    border: 0px;
+    text-align: center;
+    position: relative;
+  }
+  .banner .banner__btn a:last-child img {
+    width: 4rem;
+    height: 4rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    align-items: center;
+    padding: 1rem;
+    background: hsl(0, 0%, 100%);
+    left: 0.8rem;
+    top: 0.6rem;
+    border-radius: 3px;
+  }
+  .banner .banner__btn a:last-child span {
+    margin-left: 5rem;
+    padding-right: 1rem;
   }
   .banner .banner__video {
     width: 100%;
@@ -517,23 +537,20 @@ body {
     align-items: center;
     gap: 5rem;
   }
-  .ltrust__icons img {
-    width: auto;
-  }
   .ltrust__icons img#airbnb {
-    width: 11rem;
+    width: 12rem;
   }
   .ltrust__icons img#nasa {
-    width: 7rem;
+    width: 8rem;
   }
   .ltrust__icons img#nyt {
-    width: 16rem;
+    width: 17rem;
   }
   .ltrust__icons img#target {
-    width: 6rem;
+    width: 7rem;
   }
   .ltrust__icons img#etsy {
-    width: 6rem;
+    width: 7rem;
   }
   .ltrust__text {
     display: block;

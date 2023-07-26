@@ -16,16 +16,20 @@
             background: #4285f4;
             border: 0px;
             text-align: center;
+            position:relative;
 
             img {
-                @include imgFit(4.5rem, 4.5rem);
+                @include imgFit(4rem, 4rem);
                 position: absolute;
-                align-content: center;
+                align-items: center;
                 padding: 1rem;
                 background: $clr-light;
-                left: 0;
-                top: 0;
-                bottom: 0;
+                left:0.5rem;
+                top:0.6rem;
+                border-radius: 3px;
+            }
+            span {
+                margin-left:2rem;
             }
         }
     }
@@ -59,10 +63,7 @@
             &__wrapper {
             }
             &__content {
-                display: grid;
-                align-items: center;
-                grid-template-columns: 1fr 1fr;
-                grid-column-gap: 2%;
+                @include gridEven(2,5rem);
                 padding-top: 5rem;
                 padding-bottom: 5rem;
             }
@@ -85,10 +86,30 @@
                 padding-top: 2rem;
                 padding-bottom: 2rem;
                 a {
-                    padding-top: 19px;
-                    padding-right: 40px;
-                    padding-bottom: 20px;
-                    padding-left: 40px;
+                }
+                a:last-child {
+                    background: #4285f4;
+                    border: 0px;
+                    text-align: center;
+                    position:relative;
+        
+                    img {
+                        @include imgFit(4rem, 4rem);
+                        position: absolute;
+                        align-items: center;
+                        padding: 1rem;
+                        background: $clr-light;
+                        left:0.8rem;
+                        top:0.6rem;
+                        border-radius: 3px;
+                    }
+                    span {
+                        margin-left:5rem;
+                        padding-right: 1rem;
+                    }
+                }
+                img {
+
                 }
             }
             &__video {
@@ -159,21 +180,20 @@
             align-items: center;
             gap:5rem;
             img {
-                width:auto;
                 &#airbnb {
-                    width: 11rem;
+                    width: 12rem;
                 }
                 &#nasa {
-                    width: 7rem;
+                    width: 8rem;
                 }
                 &#nyt {
-                    width: 16rem;
+                    width: 17rem;
                 }
                 &#target {
-                    width: 6rem;
+                    width: 7rem;
                 }
                 &#etsy{
-                    width: 6rem;
+                    width: 7rem;
                 }
             }
         }
@@ -183,3 +203,4 @@
         }
     }
 }
+
