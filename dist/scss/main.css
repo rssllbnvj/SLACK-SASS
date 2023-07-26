@@ -363,7 +363,7 @@ body {
 .banner {
   background: hsl(294, 54%, 27%);
   position: relative;
-  height: 100vh;
+  height: 95vh;
 }
 .banner__wrapper {
   padding-top: 10rem;
@@ -427,6 +427,9 @@ body {
   display: none;
 }
 @media screen and (min-width: 940px) {
+  .banner .banner {
+    height: 90vh;
+  }
   .banner .banner__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -502,8 +505,8 @@ body {
   background: hsl(32, 43%, 93%);
 }
 .ltrust__wrapper {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .ltrust__icons {
   display: flex;
@@ -528,9 +531,9 @@ body {
   width: 5rem;
 }
 .ltrust__text {
-  display: none;
+  display: block;
   font-size: 1.5rem;
-  padding-top: 2rem;
+  padding-bottom: 2rem;
   text-align: center;
   font-weight: 600;
 }

@@ -1,7 +1,7 @@
 .banner {
     background: $clr-primary;
     position: relative;
-    height: 100vh;
+    height: 95vh;
     &__wrapper {
         padding-top: 10rem;
     }
@@ -55,7 +55,7 @@
         video {
             @include imgFit(100%, 300px);
             position: absolute;
-            left:0;
+            left: 0;
             bottom: 0;
         }
     }
@@ -64,8 +64,10 @@
     }
     @include mediaQuery($break-lg) {
         .banner {
+            height: 90vh;
             &__wrapper {
                 @include gridEven(2, 2rem);
+                
             }
             &__content {
                 padding-top: 5rem;
@@ -135,8 +137,8 @@
     background: $clr-fwhite;
 
     &__wrapper {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     &__icons {
@@ -166,9 +168,9 @@
     }
 
     &__text {
-        display: none;
+        display: block;
         font-size: 1.5rem;
-        padding-top: 2rem;
+        padding-bottom: 2rem;
         text-align: center;
         font-weight: 600;
     }
