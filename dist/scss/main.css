@@ -20,7 +20,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.4;
   font-family: "Raleway", sans-serif;
-  height: 10000px;
 }
 
 .container {
@@ -35,6 +34,7 @@ body {
   position: relative;
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 .header .container {
   transition: 0.5s ease;
@@ -67,7 +67,7 @@ body {
   font-size: 3rem;
 }
 .header .branding ul {
-  display: flex;
+  display: none;
 }
 .header__nav {
   position: absolute;
@@ -183,7 +183,10 @@ body {
   transition: all 0.5s;
 }
 .header__actions__btn {
-  display: flex;
+  display: none;
+}
+.header__actions__btn a.sign {
+  display: none;
 }
 @media screen and (min-width: 940px) {
   .header__nav {
@@ -294,4 +297,153 @@ body {
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 100%);
   z-index: 999;
+}
+.btn.bg--bnnrlight {
+  background: hsl(0, 0%, 100%);
+  color: hsl(294, 54%, 27%);
+  border: 1px solid hsl(294, 54%, 27%);
+  border-radius: 4px;
+}
+.btn.bg--bnnrlight::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: hsl(294, 54%, 27%);
+  transform-origin: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+  z-index: -1;
+  border-radius: 4px;
+}
+.btn.bg--bnnrlight:hover::before {
+  transition: 0.5s ease;
+  width: 100%;
+}
+.btn.bg--bnnrlight:hover {
+  transition: 0.5s ease;
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
+  z-index: 999;
+}
+.btn.bg--bnnrblue {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+}
+.btn.bg--bnnrblue::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  transform-origin: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+  z-index: -1;
+  border-radius: 4px;
+}
+.btn.bg--bnnrblue:hover::before {
+  transition: 0.5s ease;
+  width: 100%;
+}
+.btn.bg--bnnrblue:hover {
+  transition: 0.5s ease;
+  color: hsl(0, 0%, 0%);
+  z-index: 999;
+}
+
+/*PAGES*/
+.banner {
+  background: hsl(294, 54%, 27%);
+}
+.banner__wrapper {
+  padding-top: 10rem;
+}
+.banner__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.banner__btn a {
+  text-align: center;
+}
+.banner__btn a:last-child {
+  background: #4285f4;
+  border: 0px;
+  text-align: center;
+}
+.banner__btn a:last-child img {
+  width: 4.5rem;
+  height: 4.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  align-content: center;
+  padding: 1rem;
+  background: hsl(0, 0%, 100%);
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.banner__text {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.banner__text h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 4rem;
+  font-weight: bold;
+}
+.banner__text h1 span {
+  color: #ecb22e;
+}
+.banner__text p {
+  color: hsl(0, 0%, 100%);
+}
+.banner video {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 10rem;
+  position: unset;
+  bottom: 0;
+}
+@media screen and (min-width: 940px) {
+  .banner .banner__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .banner .banner__text {
+    text-align: left;
+    order: 1;
+  }
+  .banner .banner__text h1 {
+    max-width: 100rem;
+    font-size: 6rem;
+  }
+  .banner .banner__text p {
+    max-width: 45rem;
+  }
+  .banner .banner__btn {
+    flex-direction: row;
+  }
+  .banner .banner__btn a {
+    padding-top: 19px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+  .banner .banner__video {
+    width: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+  }
 }/*# sourceMappingURL=main.css.map */

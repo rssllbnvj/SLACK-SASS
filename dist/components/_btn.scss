@@ -6,6 +6,7 @@
     color: $clr-dark;
     font-weight: 550;
     position: relative;
+
     &.bg {
         &--primary {
             background: $clr-primary;
@@ -14,6 +15,7 @@
             -webkit-transition: ease-out 0.4s;
             -moz-transition: ease-out 0.4s;
             transition: ease-out 0.4s;
+
             &::before {
                 content: "";
                 width: 0%;
@@ -30,6 +32,7 @@
                 z-index: -1;
                 border-radius: 1rem;
             }
+
             &:hover::before {
                 -webkit-transition: ease-out 0.4s;
                 -moz-transition: ease-out 0.4s;
@@ -37,6 +40,7 @@
                 width: 100%;
                 height: 100%;
             }
+
             &:hover {
                 -webkit-transition: ease-out 0.4s;
                 -moz-transition: ease-out 0.4s;
@@ -47,10 +51,12 @@
                 z-index: 999;
             }
         }
+
         &--light {
             background: $clr-light;
             color: $clr-primary;
             border: 1px solid $clr-primary;
+
             &::before {
                 content: "";
                 width: 0%;
@@ -65,10 +71,12 @@
                 z-index: -1;
                 border-radius: 1rem;
             }
+
             &:hover::before {
                 transition: 0.5s ease;
                 width: 100%;
             }
+
             &:hover {
                 transition: 0.5s ease;
                 color: $clr-light;
@@ -76,5 +84,73 @@
                 z-index: 999;
             }
         }
+        &--bnnrlight {
+            background: $clr-light;
+            color: $clr-primary;
+            border: 1px solid $clr-primary;
+            border-radius: 4px;
+
+            &::before {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background-color: $clr-primary;
+                transform-origin: left;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 0.5s ease;
+                z-index: -1;
+                border-radius: 4px;
+            }
+
+            &:hover::before {
+                transition: 0.5s ease;
+                width: 100%;
+            }
+
+            &:hover {
+                transition: 0.5s ease;
+                color: $clr-light;
+                border: 1px solid $clr-light;
+                z-index: 999;
+            }
+        }
+        &--bnnrblue {
+            background: $clr-light;
+            color: $clr-light;
+           
+            border-radius: 4px;
+
+            &::before {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background-color: $clr-light;
+                transform-origin: left;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 0.5s ease;
+                z-index: -1;
+                border-radius: 4px;
+            }
+
+            &:hover::before {
+                transition: 0.5s ease;
+                width: 100%;
+            }
+
+            &:hover {
+                transition: 0.5s ease;
+                color: $clr-dark;
+                
+                z-index: 999;
+            }
+        }
+
+        
     }
 }

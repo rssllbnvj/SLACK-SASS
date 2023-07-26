@@ -1,0 +1,89 @@
+.banner {
+    background:$clr-primary;
+
+    &__wrapper {
+        padding-top: 10rem;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        a {
+            text-align: center;
+        }
+        a:last-child {
+            background: #4285f4;
+            border: 0px;
+            text-align: center;
+
+            img {
+                @include imgFit(4.5rem, 4.5rem);
+                position: absolute;
+                align-content: center;
+                padding: 1rem;
+                background: $clr-light;
+                left: 0;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+    &__text {
+        text-align: center;
+        padding-bottom: 5rem;
+        h1 {
+            color: $clr-light;
+            font-size: 4rem;
+            font-weight: bold;
+            span {
+                color: #ecb22e;
+            }
+        }
+        p {
+            color: $clr-light;
+        }
+    }
+    video {
+        @include imgFit(100%, 400px);
+        padding-top: 10rem;
+        position: unset;
+        bottom: 0;
+    }
+    @include mediaQuery($break-lg) {
+        .banner {
+            &__wrapper {
+                display:flex;
+                flex-direction: row;
+                // display:grid;
+                // grid-template-columns: 1fr 1fr;
+            }
+            &__content{
+                
+            }
+            &__text {
+                text-align: left;
+                order: 1;
+                h1 {
+                    max-width: 100rem;
+                    font-size: 6rem;
+                }
+                p {
+                    max-width: 45rem;
+                }
+            }
+            &__btn {
+                flex-direction: row;
+                a {
+                    padding-top: 19px;
+                    padding-right: 40px;
+                    padding-bottom: 20px;
+                    padding-left: 40px;
+                }
+            }
+            &__video {
+                @include imgFit(100%, 400px);
+            }
+        }
+    }
+}
