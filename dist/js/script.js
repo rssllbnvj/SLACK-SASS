@@ -16,7 +16,7 @@ drop.forEach((link) => {
 const kamote = document.querySelector(".header");
 window.addEventListener("scroll", () => {
   console.log(window.scrollY);
-  if (window.scrollY >= 2000) {
+  if (window.scrollY >= 1000) {
     kamote.classList.add("white");
   } else {
     kamote.classList.remove("white");
