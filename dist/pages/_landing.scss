@@ -1,5 +1,5 @@
 .banner {
-    background: $clr-primary;
+    background: $clr-dprimary;
     position: relative;
     height: 95vh;
     &__wrapper {
@@ -67,7 +67,6 @@
             height: 90vh;
             &__wrapper {
                 @include gridEven(2, 2rem);
-                
             }
             &__content {
                 padding-top: 5rem;

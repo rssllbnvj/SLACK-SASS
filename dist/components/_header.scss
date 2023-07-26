@@ -1,5 +1,5 @@
 .header {
-    background: $clr-primary;
+    background: $clr-dprimary;
     position: relative;
     position: fixed;
     width: 100%;
@@ -11,7 +11,7 @@
     &.white {
         background: transparent;
         .container {
-            background: $clr-dprimary;
+            background: $clr-primary;
             border-radius: 50px;
             margin-top: 1rem;
             transition: 0.5s ease;
