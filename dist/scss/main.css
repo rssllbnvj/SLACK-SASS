@@ -366,7 +366,6 @@ body {
 }
 .banner__wrapper {
   padding-top: 10rem;
-  height: 100vh;
 }
 .banner__btn {
   display: flex;
@@ -420,8 +419,6 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   position: unset;
-  bottom: 0;
-  left: 0;
 }
 .banner__slfree {
   display: none;

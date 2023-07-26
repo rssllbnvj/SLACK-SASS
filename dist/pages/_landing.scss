@@ -3,7 +3,6 @@
     position: relative;
     &__wrapper {
         padding-top: 10rem;
-        height:100vh;
     }
 
     &__btn {
@@ -54,8 +53,6 @@
     video {
         @include imgFit(100%, 400px);
         position:unset;
-        bottom:0;
-        left:0;
 
     }
     &__slfree {
