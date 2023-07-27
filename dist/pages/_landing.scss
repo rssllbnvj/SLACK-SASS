@@ -296,7 +296,7 @@
             padding-right: 6rem;
 
             video {
-                @include imgFit(100%, 400px);
+                @include imgFit(95%, 380px);
                 position: relative;
                 right: 6rem;
             }
@@ -315,6 +315,8 @@
         padding-bottom: 10rem;
 
         &__text {
+            padding: 2rem;
+
             & h2 {
                 font-size: 3rem;
                 font-weight: bold;
@@ -414,7 +416,7 @@
             padding-right: 6rem;
 
             video {
-                @include imgFit(100%, 400px);
+                @include imgFit(95%, 380px);
                 position: relative;
             }
         }
@@ -434,9 +436,10 @@
             @include gridEven(2, 10rem);
             padding-bottom: 3rem;
             max-width: 140rem;
-            margin:0 auto;
+            margin: 0 auto;
             align-items: center;
             justify-content: center;
+
             &__text {
                 h2 {
                     font-size: 4rem;
@@ -474,6 +477,7 @@
             margin: 0 auto;
             align-items: center;
             justify-content: center;
+
             &__text {
                 order: -1;
                 padding: 2rem;
@@ -511,8 +515,8 @@
             @include gridEven(2, 10rem);
             padding-bottom: 2rem;
             max-width: 140rem;
-                margin: 0 auto;
-                align-items: center;
+            margin: 0 auto;
+            align-items: center;
 
             &__text {
                 padding: 2rem;
@@ -547,3 +551,4 @@
         }
     }
 }
+
