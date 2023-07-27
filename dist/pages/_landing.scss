@@ -243,8 +243,7 @@
 
 .trisect {
     background: $clr-fwhite;
-    max-width: 140rem;
-    margin: 0 auto;
+
     &__wrapper {
         padding-top: 2rem;
     }
@@ -257,8 +256,6 @@
         padding-bottom: 10rem;
 
         &__text {
-            padding: 2rem;
-
             h2 {
                 font-size: 3rem;
                 font-weight: bold;
@@ -277,7 +274,7 @@
             }
 
             & a::after {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 100%;
                 transform: scaleX(0);
@@ -296,8 +293,10 @@
         }
 
         &__vidmob {
+            padding-right: 6rem;
+
             video {
-                @include imgFit(100%, 455px);
+                @include imgFit(100%, 400px);
                 position: relative;
                 right: 6rem;
             }
@@ -316,8 +315,6 @@
         padding-bottom: 10rem;
 
         &__text {
-            padding: 2rem;
-
             & h2 {
                 font-size: 3rem;
                 font-weight: bold;
@@ -336,7 +333,7 @@
             }
 
             & a::after {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 100%;
                 transform: scaleX(0);
@@ -355,10 +352,11 @@
         }
 
         &__vidmob {
+            padding-left: 6rem;
+
             video {
                 @include imgFit(100%, 400px);
                 position: relative;
-                left: 6rem;
             }
         }
 
@@ -394,7 +392,7 @@
             }
 
             & a::after {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 100%;
                 transform: scaleX(0);
@@ -413,10 +411,11 @@
         }
 
         &__vidmob {
+            padding-right: 6rem;
+
             video {
-                @include imgFit(96%, 450px);
+                @include imgFit(100%, 400px);
                 position: relative;
-                right: 6rem;
             }
         }
 
@@ -427,16 +426,17 @@
 
     @include mediaQuery($break-lg) {
         &__wrapper {
-            max-width: 140rem;
             padding-top: 5rem;
-            margin: 0 auto;
             padding-bottom: 5rem;
         }
 
         &1 {
             @include gridEven(2, 10rem);
             padding-bottom: 3rem;
-
+            max-width: 140rem;
+            margin:0 auto;
+            align-items: center;
+            justify-content: center;
             &__text {
                 h2 {
                     font-size: 4rem;
@@ -470,7 +470,10 @@
         &2 {
             @include gridEven(2, 10rem);
             padding-bottom: 4rem;
-
+            max-width: 140rem;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
             &__text {
                 order: -1;
                 padding: 2rem;
@@ -507,6 +510,9 @@
         &3 {
             @include gridEven(2, 10rem);
             padding-bottom: 2rem;
+            max-width: 140rem;
+                margin: 0 auto;
+                align-items: center;
 
             &__text {
                 padding: 2rem;
