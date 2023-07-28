@@ -985,6 +985,11 @@ body.body.open {
   z-index: 999;
 }
 
+.footer__left ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
 .footer__left li {
   font-size: 1.4rem;
   padding: 2rem 0;
@@ -1016,6 +1021,24 @@ body.body.open {
   border: 0 solid transparent;
   font-size: 2.5rem;
   cursor: pointer;
+}
+@media screen and (min-width: 940px) {
+  .footer__left li {
+    font-size: 1.6rem;
+    padding: 2rem 0;
+    font-weight: bold;
+  }
+  .footer__left li a {
+    color: hsl(0, 0%, 0%);
+  }
+  .footer__left .modal {
+    background: hsl(0, 0%, 100%);
+    border: 1px solid black;
+    max-width: 72rem;
+    height: auto;
+    margin: 0 auto;
+    bottom: 15rem;
+  }
 }
 
 /*PAGES*/
@@ -1592,6 +1615,21 @@ body.body.open {
   text-align: center;
 }
 @media screen and (min-width: 940px) {
+  .prcnt .prcnt__cntnt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  .prcnt .prcnt__cntnt__vid video {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+    right: 2rem;
+    border-top-right-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+  }
   .prcnt .prcnt__text h3 {
     font-size: 5rem;
     font-weight: 600;
@@ -1634,20 +1672,17 @@ body.body.open {
     justify-content: center;
     align-items: center;
     padding: 7rem 0;
-    text-align: center;
   }
   .prcnt .prcnt__nmbrs ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 25rem;
   }
   .prcnt .prcnt__nmbrs ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
   .prcnt .prcnt__nmbrs ul li p:first-child {
     color: #63206a;
@@ -1657,7 +1692,6 @@ body.body.open {
   .prcnt .prcnt__nmbrs ul li p:last-child {
     margin: 0 auto;
     max-width: 15rem;
-    text-align: center;
     padding-bottom: 3rem;
     font-size: 1.3rem;
   }

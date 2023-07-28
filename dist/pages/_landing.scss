@@ -656,6 +656,20 @@
 
   @include mediaQuery($break-lg) {
     .prcnt {
+      &__cntnt{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:2rem;
+        &__vid{
+          video{
+            @include imgFit(100%, 300px);
+            position: relative;
+            right: 2rem;
+            border-top-right-radius: 15rem;
+            border-bottom-right-radius: 15rem;
+          }
+        }
+      }
       &__text {
         h3 {
           font-size: 5rem;
@@ -705,20 +719,17 @@
         justify-content: center;
         align-items: center;
         padding: 7rem 0;
-        text-align: center;
 
         ul {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          align-items: center;
           gap: 25rem;
 
           li {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
 
             p:first-child {
               color: $clr-primary;
@@ -729,7 +740,6 @@
             p:last-child {
               margin: 0 auto;
               max-width: 15rem;
-              text-align: center;
               padding-bottom: 3rem;
               font-size: 1.3rem;
             }

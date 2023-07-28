@@ -1,5 +1,10 @@
 .footer {
   &__left {
+    ul{
+      display:flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
     li {
       font-size: 1.4rem;
       padding: 2rem 0;
@@ -7,12 +12,11 @@
 
       a {
         color: $clr-dark;
-        
       }
     }
 
     .modal {
-      position:fixed;
+      position: fixed;
       padding: 2rem;
       overflow-y: auto;
       top: auto;
@@ -28,12 +32,36 @@
       &.active {
         display: block;
       }
-      button{
-        float:right;
+
+      button {
+        float: right;
         background: transparent;
         border: 0 solid transparent;
         font-size: 2.5rem;
         cursor: pointer;
+      }
+    }
+  }
+
+  @include mediaQuery ($break-lg) {
+    &__left {
+      li {
+        font-size: 1.6rem;
+        padding: 2rem 0;
+        font-weight: bold;
+
+        a {
+          color: $clr-dark;
+        }
+      }
+
+      .modal {
+        background: $clr-light;
+        border: 1px solid black;
+        max-width: 72rem;
+        height: auto;
+        margin: 0 auto;
+        bottom: 15rem;
       }
     }
   }

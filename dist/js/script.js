@@ -25,19 +25,35 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
+
+
+
 const modal = document.querySelector('.modal');
 const btnRegion = document.querySelector('.region');
 const btnClose = document.querySelector('#closeModal');
 
-btnRegion.addEventListener('click', () => {
-  btnRegion.classList.toggle('active')
-  btnRegion.nextElementSibling.classList.toggle('active')
-})
+const openModalHandler = () => {
+  btnRegion.classList.toggle('active');
+  btnRegion.nextElementSibling.classList.toggle('active');
+  modal.classList.toggle('active');
+}
 
-btnClose.addEventListener('click', () => {
+const closeModalHandler = () => {
   modal.classList.toggle('active');
   btnRegion.classList.toggle('active');
-})
+}
+
+const closeModalOnFocusOut = (event) => {
+  if (!modal.contains(event.target)) {
+    closeModalHandler();
+  }
+}
+
+btnClose.addEventListener('click', closeModalHandler);
+btnRegion.addEventListener('click', openModalHandler);
+window.addEventListener('click', closeModalOnFocusOut);
+
 
 
 
