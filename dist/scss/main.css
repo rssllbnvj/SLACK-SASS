@@ -994,13 +994,28 @@ body.body.open {
   color: hsl(0, 0%, 0%);
 }
 .footer__left .modal {
-  display: none;
+  position: fixed;
+  padding: 2rem;
+  overflow-y: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
+  background: blue;
+  display: none;
+  z-index: 9999;
 }
 .footer__left .modal.active {
   display: block;
+}
+.footer__left .modal button {
+  float: right;
+  background: transparent;
+  border: 0 solid transparent;
+  font-size: 2.5rem;
+  cursor: pointer;
 }
 
 /*PAGES*/
