@@ -5,7 +5,14 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 1.4;
-    font-family: $ff-primary;
+    font-family: 
+        Slack-Larsseit,
+        "Helvetica Neue",
+        Helvetica,
+        "Segoe UI",
+        Tahoma,
+        Arial,
+        sans-serif;
 
     &.body.open {
         overflow-y: hidden;
