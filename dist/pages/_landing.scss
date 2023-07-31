@@ -862,6 +862,7 @@
       &.tns-nav-active {
         transition: .5s ease;
         background-color: $clr-primary;
+        
       }
 
       &:not(.tns-nav-active) {

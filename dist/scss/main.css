@@ -1081,8 +1081,10 @@ body.body.open {
   .footer__left .modal {
     background: hsl(0, 0%, 100%);
     border: 1px solid black;
-    width: 800px;
-    height: 550px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin: 0 auto;
     bottom: 15rem;
     overflow-y: hidden;

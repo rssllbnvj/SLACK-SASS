@@ -115,15 +115,15 @@
       .modal {
         background: $clr-light;
         border: 1px solid black;
-        width: 800px;
-        height: 550px;
+        width: fit-content;
+        height: fit-content;
         margin: 0 auto;
         bottom: 15rem;
         overflow-y: hidden;
         overflow-x: hidden;
 
         & h2 {
-          margin:0 0;
+          margin: 0 0;
           font-size: 2rem;
           font-weight: bold;
           text-align: left;
@@ -131,7 +131,7 @@
         }
 
         & #upp {
-          margin:0 0;
+          margin: 0 0;
           font-size: 1.8rem;
           line-height: 1.5;
           margin-bottom: 2rem;
@@ -149,6 +149,7 @@
         ul {
           li {
             margin: 0 2rem;
+
             h5 {
               font-size: 1.5rem;
             }
