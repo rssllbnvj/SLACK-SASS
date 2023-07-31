@@ -15,6 +15,7 @@ drop.forEach((link) => {
   });
 });
 
+//floating nav bar
 const kamote = document.querySelector(".header");
 window.addEventListener("scroll", () => {
   console.log(window.scrollY);
@@ -28,31 +29,39 @@ window.addEventListener("scroll", () => {
 
 
 
-
+//Toggable Modal
 const modal = document.querySelector('.modal');
 const btnRegion = document.querySelector('.region');
 const btnClose = document.querySelector('#closeModal');
+const overlay = document.querySelector('#overlay');
 
 const openModalHandler = () => {
-  btnRegion.classList.toggle('active');
-  btnRegion.nextElementSibling.classList.toggle('active');
-  modal.classList.toggle('active');
+  btnRegion.classList.toggle('active')
+  btnRegion.nextElementSibling.classList.toggle('active')
+  overlay.classList.toggle('active');
 }
 
 const closeModalHandler = () => {
   modal.classList.toggle('active');
-  btnRegion.classList.toggle('active');
+  btnRegion.classList.toggle('active')
+  overlay.classList.toggle('active');
 }
 
-const closeModalOnFocusOut = (event) => {
-  if (!modal.contains(event.target)) {
-    closeModalHandler();
-  }
+const overlayClickHandler = () => {
+  closeModalHandler();
 }
 
-btnClose.addEventListener('click', closeModalHandler);
+btnClose.addEventListener('click', closeModalHandler)
 btnRegion.addEventListener('click', openModalHandler);
-window.addEventListener('click', closeModalOnFocusOut);
+overlay.addEventListener('click', overlayClickHandler);
+
+
+
+
+
+
+
+
 
 
 

@@ -12,8 +12,6 @@
       background: $clr-primary;
       color: $clr-light;
       border: 1px solid $clr-light;
-      -webkit-transition: ease-out 0.4s;
-      -moz-transition: ease-out 0.4s;
       transition: ease-out 0.4s;
 
       &::before {
@@ -26,24 +24,18 @@
         position: absolute;
         top: 0;
         left: 0;
-        -webkit-transition: ease-out 0.4s;
-        -moz-transition: ease-out 0.4s;
         transition: ease-out 0.4s;
         z-index: -1;
         border-radius: 1rem;
       }
 
       &:hover::before {
-        -webkit-transition: ease-out 0.4s;
-        -moz-transition: ease-out 0.4s;
         transition: ease-out 0.4s;
         width: 100%;
         height: 100%;
       }
 
       &:hover {
-        -webkit-transition: ease-out 0.4s;
-        -moz-transition: ease-out 0.4s;
         transition: ease-out 0.4s;
         color: $clr-primary;
         border: 1px solid $clr-primary;
@@ -56,6 +48,7 @@
       background: $clr-light;
       color: $clr-primary;
       border: 1px solid $clr-primary;
+      transition: ease-out 0.4s;
 
       &::before {
         content: "";
@@ -70,6 +63,7 @@
         transition: 0.5s ease;
         z-index: -1;
         border-radius: 1rem;
+        transition: ease-out 0.4s;
       }
 
       &:hover::before {
@@ -90,7 +84,7 @@
       color: $clr-primary;
       border: 1px solid $clr-primary;
       border-radius: 4px;
-
+      
       &::before {
         content: "";
         width: 0%;
@@ -158,7 +152,6 @@
       -webkit-transition: ease-out 0.4s;
       -moz-transition: ease-out 0.4s;
       transition: ease-out 0.4s;
-      
 
       &::before {
         content: "";

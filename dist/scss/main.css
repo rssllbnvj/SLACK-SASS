@@ -869,6 +869,7 @@ body.body.open {
   background: hsl(0, 0%, 100%);
   color: #63206a;
   border: 1px solid #63206a;
+  transition: ease-out 0.4s;
 }
 .btn.bg--light::before {
   content: "";
@@ -883,6 +884,7 @@ body.body.open {
   transition: 0.5s ease;
   z-index: -1;
   border-radius: 1rem;
+  transition: ease-out 0.4s;
 }
 .btn.bg--light:hover::before {
   transition: 0.5s ease;
@@ -987,12 +989,12 @@ body.body.open {
 
 .footer__left ul {
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  flex-flow: column;
+  gap: 1rem;
 }
 .footer__left li {
   font-size: 1.4rem;
-  padding: 2rem 0;
+  padding: 1rem 0;
   font-weight: bold;
 }
 .footer__left li a {
@@ -1008,7 +1010,7 @@ body.body.open {
   left: 0;
   width: 100%;
   height: 100%;
-  background: blue;
+  background: hsl(0, 0%, 100%);
   display: none;
   z-index: 9999;
 }
@@ -1022,7 +1024,52 @@ body.body.open {
   font-size: 2.5rem;
   cursor: pointer;
 }
+.footer__left .modal h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.footer__left .modal #upp {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 30rem;
+  margin: 0 auto;
+  font-weight: normal;
+  padding-bottom: 2rem;
+}
+.footer__left .modal .modal__contents {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  margin: 0 3rem;
+}
+.footer__left .modal .modal__contents ul li h5 {
+  font-size: 1.5rem;
+}
+.footer__left .modal .modal__contents ul li a {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  line-height: 2.5;
+  font-weight: normal;
+  text-decoration: none;
+}
+.footer__left .modal .modal__contents ul li a:hover {
+  color: hsl(206, 80%, 35%);
+  text-decoration: underline;
+  text-decoration-color: hsl(206, 80%, 35%);
+}
 @media screen and (min-width: 940px) {
+  .footer ul {
+    display: flex;
+    flex-flow: row;
+    gap: 2rem;
+  }
   .footer__left li {
     font-size: 1.6rem;
     padding: 2rem 0;
@@ -1034,10 +1081,39 @@ body.body.open {
   .footer__left .modal {
     background: hsl(0, 0%, 100%);
     border: 1px solid black;
-    max-width: 72rem;
-    height: auto;
+    width: 800px;
+    height: 550px;
     margin: 0 auto;
     bottom: 15rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .footer__left .modal h2 {
+    margin: 0 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    padding: 2rem 5rem;
+  }
+  .footer__left .modal #upp {
+    margin: 0 0;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-weight: normal;
+    max-width: 70rem;
+    padding: 0 5rem;
+  }
+  .footer__left .modal__contents {
+    gap: 1rem;
+    padding: 2rem 0rem;
+  }
+  .footer__left .modal__contents ul li {
+    margin: 0 2rem;
+  }
+  .footer__left .modal__contents ul li h5 {
+    font-size: 1.5rem;
   }
 }
 
@@ -1046,6 +1122,7 @@ body.body.open {
   background: #63206a;
   position: relative;
   height: 90.5vh;
+  width: 100%;
 }
 .banner__wrapper {
   padding-top: 10rem;
@@ -1053,7 +1130,7 @@ body.body.open {
 .banner__btn {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   font-size: 1.5rem;
 }
 .banner__btn a {
@@ -1604,8 +1681,29 @@ body.body.open {
 .prcnt__cntnt__text p:nth-child(2) {
   font-weight: bold;
 }
-.prcnt a {
+.prcnt__cntnt__text a {
   font-size: 2rem;
+}
+.prcnt__cntnt__text a {
+  display: inline-block;
+  position: relative;
+  color: hsl(206, 80%, 35%);
+}
+.prcnt__cntnt__text a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(206, 80%, 35%);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+.prcnt__cntnt__text a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .prcnt__dmessage {
   padding-top: 3rem;
@@ -1688,11 +1786,30 @@ body.body.open {
     color: #63206a;
     font-size: 6rem;
     font-weight: 600;
+    text-align: left;
   }
   .prcnt .prcnt__nmbrs ul li p:last-child {
     margin: 0 auto;
     max-width: 15rem;
     padding-bottom: 3rem;
     font-size: 1.3rem;
+    text-align: left;
   }
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.75;
+}
+#overlay.active {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
