@@ -1,4 +1,17 @@
 .footer {
+  &__legal {
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: column;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: $clr-dark;
+    a {
+      color: $clr-dark;
+    }
+  }
+
   &__left {
     ul {
       display: flex;
@@ -13,19 +26,17 @@
 
       a {
         color: $clr-dark;
-        transition: .2s ease;
+        transition: 0.2s ease;
       }
-      a:hover{
-        transition:.2s ease;
-        color:$clr-blue;
+      a:hover {
+        transition: 0.2s ease;
+        color: $clr-blue;
       }
     }
-    li:last-child {
-      a{
-        color:$clr-blue;
-      }
+    li:last-child{
+      display:none;
+    }
 
-    }
     .modal {
       position: fixed;
       padding: 2rem;
@@ -104,21 +115,72 @@
     }
   }
 
-  @include mediaQuery($break-lg) {
+  &__right {
+    display: flex;
+    flex-flow: column;
+    padding-top: 2rem;
     ul {
-      display: flex;
-      flex-flow: row;
-      gap: 2rem;
-    }
-
-    &__left {
-      li {
-        font-size: 1.6rem;
+      li:last-child {
         padding: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        a {
+          color: $clr-dark;
+          font-size: 2.5rem;
+        }
+        a:hover {
+          color: $clr-blue;
+        }
+      }
+    }
+    a {
+      color: $clr-blue;
+    }
+  }
+
+
+  @include mediaQuery($break-lg) {
+
+    &__right {
+      display: none;
+    }
+    &__left {
+      ul {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem 0;
+      }
+      li {
+        font-size: 1.3rem;
         font-weight: bold;
 
         a {
           color: $clr-dark;
+        }
+      }
+      li:last-child{
+        display:flex;
+        margin-left:auto;
+        justify-content: center;
+        align-items: center;
+        a{
+          color:$clr-blue;
+        }
+        .icons{
+          margin-left:1rem;
+          font-size:2rem;
+          padding:0 1rem;
+          display:flex;
+          flex-flow:row;
+          gap:1.5rem;
+          a{
+            color:$clr-dark;
+          }
+          a:hover{
+            color:$clr-blue;
+          }
         }
       }
 
@@ -165,6 +227,17 @@
             }
           }
         }
+      }
+    }
+    &__legal {
+      display: flex;
+      flex-flow: row;
+      gap: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      color: $clr-dark;
+      a {
+        color: $clr-dark;
       }
     }
   }

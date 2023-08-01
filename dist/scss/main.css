@@ -1043,6 +1043,18 @@ body.body.open {
   z-index: 999;
 }
 
+.footer__legal {
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: column;
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: hsl(0, 0%, 0%);
+}
+.footer__legal a {
+  color: hsl(0, 0%, 0%);
+}
 .footer__left ul {
   display: flex;
   flex-flow: column;
@@ -1061,8 +1073,8 @@ body.body.open {
   transition: 0.2s ease;
   color: hsl(206, 80%, 35%);
 }
-.footer__left li:last-child a {
-  color: hsl(206, 80%, 35%);
+.footer__left li:last-child {
+  display: none;
 }
 .footer__left .modal {
   position: fixed;
@@ -1128,19 +1140,66 @@ body.body.open {
   text-decoration: underline;
   text-decoration-color: hsl(206, 80%, 35%);
 }
+.footer__right {
+  display: flex;
+  flex-flow: column;
+  padding-top: 2rem;
+}
+.footer__right ul li:last-child {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__right ul li:last-child a {
+  color: hsl(0, 0%, 0%);
+  font-size: 2.5rem;
+}
+.footer__right ul li:last-child a:hover {
+  color: hsl(206, 80%, 35%);
+}
+.footer__right a {
+  color: hsl(206, 80%, 35%);
+}
 @media screen and (min-width: 940px) {
-  .footer ul {
+  .footer__right {
+    display: none;
+  }
+  .footer__left ul {
     display: flex;
     flex-flow: row;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
   }
   .footer__left li {
-    font-size: 1.6rem;
-    padding: 2rem 0;
+    font-size: 1.3rem;
     font-weight: bold;
   }
   .footer__left li a {
     color: hsl(0, 0%, 0%);
+  }
+  .footer__left li:last-child {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__left li:last-child a {
+    color: hsl(206, 80%, 35%);
+  }
+  .footer__left li:last-child .icons {
+    margin-left: 1rem;
+    font-size: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-flow: row;
+    gap: 1.5rem;
+  }
+  .footer__left li:last-child .icons a {
+    color: hsl(0, 0%, 0%);
+  }
+  .footer__left li:last-child .icons a:hover {
+    color: hsl(206, 80%, 35%);
   }
   .footer__left .modal {
     background: hsl(0, 0%, 100%);
@@ -1180,6 +1239,17 @@ body.body.open {
   }
   .footer__left .modal__contents ul li h5 {
     font-size: 1.5rem;
+  }
+  .footer__legal {
+    display: flex;
+    flex-flow: row;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: hsl(0, 0%, 0%);
+  }
+  .footer__legal a {
+    color: hsl(0, 0%, 0%);
   }
 }
 
@@ -1929,12 +1999,15 @@ body.body.open {
   margin: 0 5px;
   cursor: pointer;
 }
+.work .tns-nav button:hover {
+  outline: 1px dotted hsl(294, 54%, 27%);
+}
 .work .tns-nav button.tns-nav-active {
-  transition: 0.5s ease;
   background-color: hsl(294, 54%, 27%);
+  outline: 1px dotted hsl(294, 54%, 27%);
+  outline-offset: 3px;
 }
 .work .tns-nav button:not(.tns-nav-active) {
-  transition: 0.5s ease;
   color: hsl(294, 54%, 27%);
 }
 

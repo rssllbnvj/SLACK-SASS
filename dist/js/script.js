@@ -63,7 +63,7 @@ var slider = tns({
   navPosition: 'bottom',
   controlsContainer: '#slider-nav',
   responsive: {
-    900: {
+    940: {
       center: false,
       items: 4
     }

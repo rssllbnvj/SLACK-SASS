@@ -859,13 +859,17 @@
       margin: 0 5px;
       cursor: pointer;
 
+      &:hover {
+        outline: 1px dotted $clr-primary;
+      }
+
       &.tns-nav-active {
-        transition: 0.5s ease;
         background-color: $clr-primary;
+        outline: 1px dotted $clr-primary;
+        outline-offset: 3px;
       }
 
       &:not(.tns-nav-active) {
-        transition: 0.5s ease;
         color: $clr-primary;
       }
     }
