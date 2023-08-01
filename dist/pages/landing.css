@@ -1,15 +1,15 @@
 .banner__wrapper {
-  padding-top: 13rem;
+    padding-top: 13rem;
 }
 .banner__btn {
-  display: flex;
-  flex-direction: column;
-  padding: 5rem;
-  gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 2rem;
 }
 .banner__text {
-  text-align: center;
+    text-align: center;
 }
 .banner__text h1 {
-  font-size: 4rem;
-}/*# sourceMappingURL=landing.css.map */
+    font-size: 4rem;
+} /*# sourceMappingURL=landing.css.map */

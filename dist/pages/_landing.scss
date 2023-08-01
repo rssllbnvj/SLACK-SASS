@@ -19,7 +19,7 @@
     }
 
     a:last-child {
-      background: #4285f4;
+      background: hsl(217, 89%, 61%);
       border: 0px;
       text-align: center;
       position: relative;
@@ -155,6 +155,7 @@
   }
 }
 
+
 .ltrust {
   background: $clr-fwhite;
 
@@ -180,7 +181,7 @@
       }
 
       &#nyt {
-        width: 15rem;
+        width: 20rem;
       }
 
       &#target {
@@ -188,7 +189,7 @@
       }
 
       &#etsy {
-        width: 5rem;
+        width: 6rem;
       }
     }
   }
@@ -222,7 +223,7 @@
         }
 
         &#nyt {
-          width: 17rem;
+          width: 20rem;
         }
 
         &#target {
@@ -800,7 +801,7 @@
     padding: 1rem;
     background-color: $clr-light;
     height: 40rem;
-    width: 30rem;
+    max-width: 30rem;
     margin: 0 auto;
     padding: 1rem;
     transition: 0.5s ease;
@@ -860,17 +861,21 @@
       cursor: pointer;
 
       &:hover {
-        outline: 1px dotted $clr-primary;
+        outline: 1px dashed $clr-primary;
+        outline-offset: 3px;
+        background-color: $clr-primary;
+        transition: ease;
       }
 
       &.tns-nav-active {
         background-color: $clr-primary;
-        outline: 1px dotted $clr-primary;
+        outline: 1px dashed $clr-primary;
         outline-offset: 3px;
       }
 
       &:not(.tns-nav-active) {
         color: $clr-primary;
+        transition: 0.5s ease;
       }
     }
   }
@@ -880,6 +885,7 @@
   background: $clr-dprimary;
   height: 400px;
   clip-path: ellipse(105% 100% at center top);
+
   &__wrapper {
     padding: 5rem 0;
     display: flex;
@@ -890,6 +896,7 @@
     color: $clr-light;
     text-align: center;
   }
+
   &__text {
     h3 {
       color: $clr-light;
@@ -897,6 +904,7 @@
       font-size: 3rem;
     }
   }
+
   &__btn {
     display: flex;
     flex-direction: column;
@@ -922,10 +930,12 @@
       justify-content: center;
     }
   }
+
   @include mediaQuery($break-lg) {
     min-height: 370px;
     height: auto;
     clip-path: ellipse(75% 100% at center top);
+
     &__wrapper {
       padding: 8rem 0;
       display: flex;
@@ -936,6 +946,7 @@
       color: $clr-light;
       text-align: center;
     }
+
     &__text {
       h3 {
         color: $clr-light;
@@ -943,6 +954,7 @@
         font-size: 5rem;
       }
     }
+
     &__btn {
       display: flex;
       flex-direction: row;
@@ -958,6 +970,7 @@
         justify-content: center;
         width: 200px;
       }
+
       a:last-child {
         font-size: 1.4rem;
         width: 200px;

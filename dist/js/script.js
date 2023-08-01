@@ -26,62 +26,47 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
-
-
 //Toggable Modal
-const modal = document.querySelector('.modal');
-const btnRegion = document.querySelector('.region');
-const btnClose = document.querySelector('#closeModal');
-const overlay = document.querySelector('#overlay');
+const modal = document.querySelector(".modal");
+const btnRegion = document.querySelector(".region");
+const btnClose = document.querySelector("#closeModal");
+const overlay = document.querySelector("#overlay");
 
 const openModalHandler = () => {
-  btnRegion.classList.toggle('active')
-  btnRegion.nextElementSibling.classList.toggle('active')
-  overlay.classList.toggle('active');
-}
+  btnRegion.classList.toggle("active");
+  btnRegion.nextElementSibling.classList.toggle("active");
+  overlay.classList.toggle("active");
+};
 
 const closeModalHandler = () => {
-  modal.classList.toggle('active');
-  btnRegion.classList.toggle('active')
-  overlay.classList.toggle('active');
-}
+  modal.classList.toggle("active");
+  btnRegion.classList.toggle("active");
+  overlay.classList.toggle("active");
+};
 
 const overlayClickHandler = () => {
   closeModalHandler();
-}
+};
 
 var slider = tns({
-  container: '.slider',
+  container: ".slider",
   items: 1,
-  slideBy: 'page',
+  slideBy: "page",
   autoplay: false,
   controls: false,
   mouseDrag: true,
   center: true,
   nav: true,
-  navPosition: 'bottom',
-  controlsContainer: '#slider-nav',
+  navPosition: "bottom",
+  controlsContainer: "#slider-nav",
   responsive: {
     940: {
       center: false,
-      items: 4
-    }
-  }
-})
+      items: 4,
+    },
+  },
+});
 
-btnClose.addEventListener('click', closeModalHandler)
-btnRegion.addEventListener('click', openModalHandler);
-overlay.addEventListener('click', overlayClickHandler);
-
-
-
-
-
-
-
-
-
-
-
-
+btnClose.addEventListener("click", closeModalHandler);
+btnRegion.addEventListener("click", openModalHandler);
+overlay.addEventListener("click", overlayClickHandler);
