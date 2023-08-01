@@ -2,6 +2,7 @@ $colors: (
     "primary": $clr-primary,
     "light": $clr-light,
     "dark": $clr-dark,
+    "blue":$clr-blue,
 );
 
 @each $key, $val in $colors {

@@ -803,7 +803,7 @@
     width: 30rem;
     margin: 0 auto;
     padding: 1rem;
-    transition: .5s ease;
+    transition: 0.5s ease;
     position: relative;
     cursor: pointer;
 
@@ -824,7 +824,7 @@
 
     &:hover {
       transform: scale(1.1);
-      transition: .5s ease;
+      transition: 0.5s ease;
       box-shadow: 0px 10px 10px rgba(33, 33, 33, 0.5);
     }
 
@@ -860,14 +860,108 @@
       cursor: pointer;
 
       &.tns-nav-active {
-        transition: .5s ease;
+        transition: 0.5s ease;
         background-color: $clr-primary;
-        
       }
 
       &:not(.tns-nav-active) {
-        transition: .5s ease;
+        transition: 0.5s ease;
         color: $clr-primary;
+      }
+    }
+  }
+}
+
+.accomp {
+  background: $clr-dprimary;
+  height: 400px;
+  clip-path: ellipse(105% 100% at center top);
+  &__wrapper {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: $clr-light;
+    text-align: center;
+  }
+  &__text {
+    h3 {
+      color: $clr-light;
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    a:first-child {
+      font-size: 1.4rem;
+      border-radius: 5px;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      width: 430px;
+    }
+
+    a:last-child {
+      font-size: 1.4rem;
+      border-radius: 5px;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @include mediaQuery($break-lg) {
+    min-height: 370px;
+    height: auto;
+    clip-path: ellipse(75% 100% at center top);
+    &__wrapper {
+      padding: 8rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      color: $clr-light;
+      text-align: center;
+    }
+    &__text {
+      h3 {
+        color: $clr-light;
+        text-align: center;
+        font-size: 5rem;
+      }
+    }
+    &__btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+
+      a:first-child {
+        font-size: 1.4rem;
+        border-radius: 5px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+      }
+      a:last-child {
+        font-size: 1.4rem;
+        width: 200px;
+        border-radius: 5px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
       }
     }
   }
