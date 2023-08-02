@@ -1,76 +1,74 @@
 $colors: (
-    "primary": $clr-primary,
-    "light": $clr-light,
-    "dark": $clr-dark,
-    "blue":$clr-blue,
+  "primary": $clr-primary,
+  "light": $clr-light,
+  "dark": $clr-dark,
+  "blue": $clr-blue,
 );
 
+
 @each $key, $val in $colors {
-    .text {
-        &--#{$key} {
-            color: $val;
-        }
+  .text {
+    &--#{$key} {
+      color: $val;
     }
-    .bkg {
-        &--#{$key} {
-            background: $val;
-        }
+  }
+
+  .bkg {
+    &--#{$key} {
+      background: $val;
     }
+  }
 }
 
 $displays: none, block, flex, inline-block, inline, inline-flex, inline-table,
-    list-item, run-in, table, table-caption, table-column-group,
-    table-header-group, table-footer-group, table-row-group, table-cell;
+  list-item, run-in, table, table-caption, table-column-group,
+  table-header-group, table-footer-group, table-row-group, table-cell;
+
 @each $display in $displays {
-    .d {
-        &--#{$display} {
-            display: $display;
-        }
+  .d {
+    &--#{$display} {
+      display: $display;
     }
+  }
 }
 
-@for $i from 0 through 20{
-    .my {
-        &--#{$i} {
-            margin: $i+rem 0;
-        }
+@for $i from 0 through 20 {
+  .my {
+    &--#{$i} {
+      margin: $i + rem 0;
     }
-    .mx {
-        &--#{$i} {
-            margin: 0 $i+rem;
-        }
+  }
+
+  .mx {
+    &--#{$i} {
+      margin: 0 $i + rem;
     }
-    .m {
-        &--#{$i} {
-            margin: $i+rem;
-        }
+  }
+
+  .m {
+    &--#{$i} {
+      margin: $i + rem;
     }
-    .p {
-        &--#{$i} {
-            padding: $i+rem;
-        }
+  }
+
+  .p {
+    &--#{$i} {
+      padding: $i + rem;
     }
-    .py {
-        &--#{$i} {
-            padding: $i+rem 0;
-        }
+  }
+
+  .py {
+    &--#{$i} {
+      padding: $i + rem 0;
     }
-    .px{
-        &--#{$i} {
-            padding: 0 $i+rem;
-        }
+  }
+
+  .px {
+    &--#{$i} {
+      padding: 0 $i + rem;
     }
+  }
 }
-
-
-
-
-
-
-
-
-
-
 
 // /*-----SYNTAX of light-----*/
 // text--light
